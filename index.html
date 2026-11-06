@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorador de Episodios | Rick and Morty</title>
+
+    <!-- Conexión con los estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Rick and Morty</h1>
+        <p>Explorador de episodios</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <section class="buscador">
+            <h2>Buscar episodios</h2>
+
+            <form id="formulario-busqueda">
+
+                <div class="campo">
+                    <label for="nombre">Nombre del episodio:</label>
+                    <input
+                        type="search"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ejemplo: Pilot"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="temporada">Seleccionar temporada:</label>
+
+                    <select id="temporada" name="temporada">
+                        <option value="">Todas las temporadas</option>
+                        <option value="S01">Temporada 1</option>
+                        <option value="S02">Temporada 2</option>
+                        <option value="S03">Temporada 3</option>
+                        <option value="S04">Temporada 4</option>
+                        <option value="S05">Temporada 5</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn-buscar">
+                    Buscar episodios
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Sección de resultados -->
+        <section class="resultados">
+
+            <h2>Resultados de búsqueda</h2>
+
+            <!-- Mensajes de carga y errores -->
+            <p id="mensaje" aria-live="polite">
+                Utilizá el buscador para encontrar episodios.
+            </p>
+
+            <!-- Aquí JavaScript insertará las tarjetas -->
+            <div id="contenedor-episodios"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Proyecto desarrollado por César Minarro</p>
+        <p>Fundamentos de Desarrollo Web - 2026</p>
+    </footer>
+
+    <!-- Conexión con JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
