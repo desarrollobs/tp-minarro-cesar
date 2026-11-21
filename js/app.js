@@ -119,6 +119,7 @@ const crearTarjeta = (episodio) => {
 
 // 6. MOSTRAR LOS EPISODIOS EN PANTALLA
 
+
 const mostrarEpisodios = (episodios) => {
 
     // Limpiar resultados anteriores
@@ -126,6 +127,23 @@ const mostrarEpisodios = (episodios) => {
 
     // Verificar si existen resultados
     if (episodios.length === 0) {
+
+        // Crear una tarjeta informativa
+        const sinResultados = document.createElement("div");
+        sinResultados.classList.add("sin-resultados");
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = "No encontramos episodios";
+
+        const descripcion = document.createElement("p");
+        descripcion.textContent =
+            "No hay episodios que coincidan con tu búsqueda. Probá con otro nombre o temporada.";
+
+        sinResultados.appendChild(titulo);
+        sinResultados.appendChild(descripcion);
+
+        contenedorEpisodios.appendChild(sinResultados);
+
         mostrarMensaje("No se encontraron episodios.");
         return;
     }
